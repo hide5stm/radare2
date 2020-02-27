@@ -439,7 +439,7 @@ static void type_match(RCore *core, ut64 addr, char *fcn_name, ut64 baddr, const
 				get_src_regname (core, instr_addr, tmp, sizeof (tmp));
 				ut64 ptr = get_addr (trace, tmp, j);
 				if (ptr == xaddr) {
-					var_retype (anal, var, name, type, addr, memref, false);
+					var_retype (anal, var, name, type? type: "int", addr, memref, false);
 				}
 			}
 			r_anal_op_free (op);

@@ -3477,8 +3477,7 @@ ignore:
 			}
 		}
 
-		offstr = ptr + 1;
-		r_str_trim_head (offstr);
+		offstr = r_str_trim_head_ro (ptr + 1);
 
 		addr = r_num_math (core->num, offstr);
 		addr_is_set = true;
